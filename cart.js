@@ -35,6 +35,12 @@ const cart = [
 
 //CODE HERE
 
+const totalPrice = cart.reduce((acc, cur) => {
+    return acc + cur.price;
+}, 0);
+
+console.log(totalPrice)
+
 // const summedPrice = cart.reduce(/* CALLBACK HERE */)
 
 
@@ -55,6 +61,12 @@ const cart = [
 
 //CODE HERE
 
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    let total = (cartTotal + (cartTotal * tax) - (cartTotal * couponValue));
+    return total
+}
+
+console.log(calcFinalPrice(totalPrice, .25, .10))
 
 
 //////////////////PROBLEM 3////////////////////
@@ -80,6 +92,14 @@ const cart = [
 /*
     TEXT ANSWER HERE
 
+    Customer:
+    Name (string) - needed to maintain record
+    Email (string) - needed to send promotions to
+    Phone Number (string/number) - needed to contact regarding orders and/or reservations
+    Number of visits (number) - can be used to track rewards program
+    Birthday (string) - can be used to send promotional gift
+
+
 */
 
 /*
@@ -88,3 +108,28 @@ const cart = [
 */
 
 //CODE HERE
+
+const customer = [
+    {   name: "Hannah Smith",
+        email: "hannahs123@gmail.com",
+        phoneNumber: 3372324357,
+        numVisits: 3,
+        birthday: "February 24"
+    },
+    {
+        name: "John Catalan",
+        email: "johncat@yahoo.com",
+        phoneNumber: 3372374100,
+        numVisits: 5,
+        birthday: "May 24"
+    },
+    {
+        name: "David Milligan",
+        email: "dmilligan45@hotmail.com",
+        phoneNumber: 3378961234,
+        numVisits: 1,
+        birthday: "April 09"
+    },
+]
+
+console.log(customer)
