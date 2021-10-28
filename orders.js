@@ -31,6 +31,12 @@
 
 //CODE HERE
 
+class Ticket {
+    constructor(items, orderTime, customerId) {
+        status:
+    }
+}
+
 
 
 /*

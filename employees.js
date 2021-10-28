@@ -21,6 +21,21 @@
 
 //CODE HERE
 
+class Employee {
+    constructor(name, shifts) {
+        this.name = name;
+        this.shifts = shifts;
+    }
+    getSchedule(){
+        let schedule = new 
+    }
+
+    getSchedule(){
+        console.log(`${this.name} works on ${this.shifts}`)
+    }
+}
+
+
 
 
 /*
