@@ -32,6 +32,15 @@
 
 //CODE HERE
 
+let pizza = {
+    name: "veggie",
+    price: 9.99,
+    category: "entree",
+    popularity: 5,
+    rating: 9,
+    tags: ["healthy", "vegetable", "spinach", "mushroom"]
+}
+
 
 
 //////////////////PROBLEM 2////////////////////
@@ -44,6 +53,8 @@
 
 //CODE HERE
 
+console.log(pizza.popularity)
+
 
 /*
     Second, log the second tag in your pizza's
@@ -53,6 +64,8 @@
 */
 
 //CODE HERE
+
+console.log(pizza.tags[1])
 
 
 /*
@@ -64,6 +77,10 @@
 
 //CODE HERE
 
+let {price} = pizza
+
+console.log(price)
+
 
 /*
     Fourth, and last, destructure the category
@@ -73,6 +90,10 @@
 */
 
 //CODE HERE
+
+let {category} = pizza
+
+console.log(category)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -88,6 +109,49 @@
 */
 
 //CODE HERE
+
+let foodArr = [
+    {
+        name: "mozzarella sticks",
+        price: 6.99,
+        category: "appetizer",
+        popularity: 8,
+        rating: 9.2,
+        tags: ["cheese", "marinara", "finger foods"]
+    },
+    {
+        name: "lasagna",
+        price: 14.99,
+        category: "entree",
+        popularity: 6,
+        rating: 8.7,
+        tags: ["pasta", "meat sauce", "cheese"]
+    },
+    {
+        name: "spaghetti",
+        price: 13.99,
+        category: "entree",
+        popularity: 2,
+        rating: 8.3,
+        tags: ["meatballs", "meat sauce", "pasta"]   
+    },
+    {
+        name: "breadsticks",
+        price: 4.99,
+        category: "appetizer",
+        popularity: 4,
+        rating: 7,
+        tags: ["bread", "snack", "finger foods"]
+    },
+    {
+        name: "salad",
+        price: 5.99,
+        category: "appetizer",
+        popularity: 10,
+        rating: 9.4,
+        tags: ["vegetarian", "croutons", "cheese"]
+    }
+]
 
 
 
@@ -105,7 +169,23 @@
 
 //CODE HERE
 
+function foodTags(item) {
+    for (let i = 0; i < foodArr.length; i++) {
+        if (foodArr[i].tags === item) {
+            return foodArr[i].name
+        }
+    }
+}
+
+let filteredFood = foodArr.filter(foodTags("finger foods"))
+console.log(filteredFood)
+
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+
+// let filteredFood = foodArr.filter(foodTags(element[, index[, array]])[, thisArg])
+
+
+
 
 
 
@@ -150,6 +230,11 @@
 
 //CODE HERE
 
+const filterByProperty(prop, num, type) {
+    let newArr = [];
+
+    
+}
 
 /*
     Invoke the `filterByProperty` function passing
