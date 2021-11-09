@@ -81,14 +81,19 @@ console.log(canWeDeliver(85207))
 */
 
 // CODE HERE
+const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
+let canWeDeliverTwo = (zipcode) => {
+    for (i = 0; i < deliveryAreaZipCodes.length; i++) {
+        if (zipcode === deliveryAreaZipCodes[i]) {            
+        return "You're in our delivery zone!"
+       } else {
+        return "Sorry, we can't deliver to that address"
+        }
+    }
+}
 
-
-
-
-
-
-// console.log(canWeDeliverTwo(85205))
-// console.log(canWeDeliverTwo(85207))
+console.log(canWeDeliverTwo(85205))
+console.log(canWeDeliverTwo(85207))
 
 
 
@@ -127,32 +132,26 @@ const deals = [
 
 //CODE HERE
 
-const discount = '15% Off!'
 
-deals.find(newDiscount => newDiscount.title === discount).title = "10% Off!";
-
+deals[0].title = deals[0].title.replace("15% Off!", "10% Off!")
 console.log(deals)
 
 
-
-
 /*
-    The restaurant is going to continue its
-    family deal for another month. 
+The restaurant is going to continue its
+family deal for another month. 
 
-    Reassign the value of the second deal's desc
-    to be itself, but use the `replace` method
-    to replace the word March with April.
+Reassign the value of the second deal's desc
+to be itself, but use the `replace` method
+to replace the word March with April.
 
-    You should also make sure that there is no
-    whitespace in this string, since it seems
-    to be displaying wrong on the live site.
+You should also make sure that there is no
+whitespace in this string, since it seems
+to be displaying wrong on the live site.
 */
 
 //CODE HERE
 
-const month = '   This deal lasts until the end of March! '
 
-deals.find(newMonth => newMonth.desc === month).desc = "This deal lasts until the end of April!";
+deals[1].desc = deals[1].desc.replace("March", "April")
 console.log(deals)
-
