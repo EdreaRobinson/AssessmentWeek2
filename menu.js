@@ -169,20 +169,19 @@ let foodArr = [
 
 //CODE HERE
 
-function foodTags(item) {
-    for (let i = 0; i < foodArr.length; i++) {
-        if (foodArr[i].tags === item) {
-            return foodArr[i].name
-        }
-    }
-}
 
-let filteredFood = foodArr.filter(foodTags("finger foods"))
-console.log(filteredFood)
+
+
+
+
+
+const filteredFood = foodArr.filter(item => item.tags === "cheese")
+
+
 
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
-// let filteredFood = foodArr.filter(foodTags(element[, index[, array]])[, thisArg])
+
 
 
 
@@ -230,15 +229,15 @@ console.log(filteredFood)
 
 //CODE HERE
 
-const filterByProperty(prop, num, type) {
-    let newArr = [];
+// const filterByProperty(prop, num, type) {
+//     let newArr = [];
 
     
-}
+// }
 
 /*
     Invoke the `filterByProperty` function passing
-    in a value for each paramter.
+    in a value for each parameter.
 
     You'll have to console.log to see the filtered array
 */
