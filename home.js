@@ -81,7 +81,7 @@ console.log(canWeDeliver(85207))
 */
 
 // CODE HERE
-const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
+// const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 let canWeDeliverTwo = (zipcode) => {
     for (i = 0; i < deliveryAreaZipCodes.length; i++) {
         if (zipcode === deliveryAreaZipCodes[i]) {            

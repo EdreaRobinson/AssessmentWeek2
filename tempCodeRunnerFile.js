@@ -1,5 +1,53 @@
-var array = [{ category: 'Business', users: [{ name: 'Sally', tags: [{ tag: 'accounting' }, { tag: 'marketing' }] }, { name: 'Bob', tags: [{ tag: 'sales' }, { tag: 'accounting' }] }] }, { category: 'Heritage', users: [{ name: 'Linda', tags: [{ tag: 'Italy' }, { tag: 'Macedonia' }] }, { name: 'George', tags: [{ tag: 'South Africa' }, { tag: 'Chile' }] }] }],
-    tag = 'marketing',
-    result = array.filter(a => a.users.some(u => u.tags.some(t => t.tag.includes(tag))));
+class Employee {
+    constructor(name, shifts) {
+        this.name = name;
+        this.shifts = shifts;
+    }
+    getSchedule(){
+        console.log(`${this.name} works on ${this.shifts}`)
+    }
+}
 
-console.log(result);
+let karenS = new Employee ("Karen", "Saturday")
+karenS.getSchedule()
+
+
+/*
+    Create a new instance of your class.
+    Save it to a variable called `empOne`.
+
+    You can use this sample data or make
+    up your own:
+    name: Jess
+    shifts: weekday mornings, weekday afternoons
+*/
+
+//CODE HERE
+
+let empOne = new Employee ("Jess", "weekday mornings and weekday afternoons")
+
+/*
+    Call the `getSchedule` method on the
+    `empOne` object.
+*/
+
+//CODE HERE
+empOne.getSchedule()
+
+/*
+    Make a copy of the empOne object
+    using the spread operator.
+    Save it to a variable called `empTwo`.
+
+    Change the name of `empTwo` to 'Nick'.
+
+    Hint: you can do this inline with the 
+    spread operator or reassign it using 
+    dot or bracket notation.
+*/
+
+//CODE HERE
+
+let empTwo = {... empOne}
+empTwo.name = "Nick"
+console.log(empTwo)
